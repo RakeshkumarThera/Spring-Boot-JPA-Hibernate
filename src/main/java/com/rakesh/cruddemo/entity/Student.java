@@ -1,7 +1,6 @@
 package com.rakesh.cruddemo.entity;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 @Entity
 @Table(name = "student")
@@ -22,9 +21,11 @@ public class Student {
     @Column(name = "email")
     private String email;
 
+    // No-argument constructor
+    public Student() {
+    }
 
-    //define constructors
-
+    //define constructor
     public Student(int id, String firstName, String lastName, String email) {
         this.id = id;
         this.firstName = firstName;
@@ -34,7 +35,6 @@ public class Student {
 
 
     //define getters/setters
-
     public int getId() {
         return id;
     }
