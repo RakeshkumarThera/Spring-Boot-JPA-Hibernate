@@ -3,38 +3,37 @@ package com.rakesh.cruddemo.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "student")
+@Table(name="student")
 public class Student {
 
-    //define fields
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
-   @Column(name = "id")
-   private int id;
+    // define fields
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
+    private int id;
 
-   @Column(name = "first_name")
-   private String firstName;
+    @Column(name="first_name")
+    private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name="last_name")
     private String lastName;
 
-    @Column(name = "email")
+    @Column(name="email")
     private String email;
 
-    // No-argument constructor
+    // define constructors
     public Student() {
+
     }
 
-    //define constructor
-    public Student(int id, String firstName, String lastName, String email) {
-        this.id = id;
+    public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
 
+    // define getters/setters
 
-    //define getters/setters
     public int getId() {
         return id;
     }
@@ -68,7 +67,7 @@ public class Student {
     }
 
 
-    //define toString() method
+    // define toString() method
 
     @Override
     public String toString() {
