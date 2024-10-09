@@ -22,14 +22,15 @@ public class Student {
     private String email;
 
     // define constructors
-    public Student() {
-
-    }
 
     public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+    }
+
+    public Student() {
+
     }
 
     // define getters/setters
